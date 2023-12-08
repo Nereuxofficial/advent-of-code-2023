@@ -1,11 +1,11 @@
 use std::collections::BTreeMap;
 
 fn main() {
-    println!("Hello, aoc!");
     // Read input file from arguments
     let args: Vec<String> = std::env::args().collect();
     let input = std::fs::read_to_string(&args[1]).expect("Error reading input file!");
     let sum: i32 = decode_input(&input).iter().sum();
+    println!("Sum of numbers: {}", sum);
 }
 
 fn decode_input(input: &str) -> Vec<i32> {
